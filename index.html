@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Gallery</title>
+</head>
+
+<body>
+    <!-- Heading Name -->
+    <div class="heading">
+        <h1>Image Gallery</h1>
+    </div>
+
+    <!-- Image Gallery section all images in one div -->
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src=
+            "C:\Users\My Pc\Desktop\photos\IMG_2918.JPG"
+                onclick="openModal(
+'C:\\Users\\My Pc\\Desktop\\photos\\IMG_2918.JPG')"
+                alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src=
+            "C:\Users\My Pc\Desktop\photos\IMG_20231118_162453_181.jpg"
+                onclick="openModal(
+'C:\\Users\\My Pc\\Desktop\\photos\\IMG_20231118_162453_181.jpg')"
+                alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src=
+            "C:\Users\My Pc\Desktop\photos\IMG_2912.JPG"
+                onclick="openModal(
+'C:\\Users\\My Pc\\Desktop\\photos\\IMG_2912.JPG')"
+                alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src=
+            "C:\Users\My Pc\Desktop\photos\FW9A2618.JPG.jpg"
+                onclick="openModal(
+'C:\\Users\\My Pc\\Desktop\\photos\\FW9A2618.JPG.jpg')"
+                alt="Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src=
+            "C:\Users\My Pc\Desktop\photos\IMG_20240714_114445_988.jpg"
+                onclick="openModal(
+'C:\\Users\\My Pc\\Desktop\\photos\\IMG_20240714_114445_988.jpg')"
+                alt="Image 5">
+        </div>
+        <div class="gallery-item">
+            <img src=
+            "C:\Users\My Pc\Desktop\photos\IMG_20240714_114448_935.jpg"
+                onclick="openModal(
+'C:\\Users\\My Pc\\Desktop\\photos\\IMG_20240714_114448_935.jpg')"
+                alt="Image 6">
+        </div>
+        <div class="gallery-item">
+            <img src=
+            "C:\Users\My Pc\Desktop\photos\IMG_20230524_234846_961.jpg"
+                onclick="openModal(
+'C:\\Users\\My Pc\\Desktop\\photos\\IMG_20230524_234846_961.jpg')"
+                alt="Image 7">
+        </div>
+        <div class="gallery-item">
+            <img src=
+            "C:\Users\My Pc\Desktop\photos\1698137505907.JPG"
+                onclick="openModal(
+'C:\\Users\\My Pc\\Desktop\\photos\\1698137505907.JPG')"
+                alt="Image 8">
+        </div>
+    </div>
+
+    <!-- Modal for Image Display -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+    
+
+    <!-- JavaScript for Modal -->
+    <script>
+        function openModal(src) {
+            document.getElementById("modalImage").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
